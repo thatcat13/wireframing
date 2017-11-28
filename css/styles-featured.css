@@ -1,0 +1,78 @@
+/* For testing only */
+
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.columns {
+  min-height: 100px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+ padding: 1rem;
+}
+
+.nav {
+ overflow: auto;
+}
+
+.logo {
+ display: block;
+ height: 50px;
+ width: 50px;
+}
+
+.nav-list ul {
+ display: block;
+ margin-left: 0;
+ padding-left: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.gallery {
+ display: flex;
+ justify-content: space-around;
+ flex-direction: column;
+ flex-flow: wrap;
+}
+
+.figure {
+ margin: 1%;
+ flex-basis: 100%;
+ height: 200px;
+}
+
+@media screen and (min-width: 650px) {
+  .figure {
+    flex-basis: 47%;
+  }
+
+  .nav-list {
+    float: right;
+  }
+
+  .logo {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .figure {
+    flex-basis: 23%;
+  }
+}
