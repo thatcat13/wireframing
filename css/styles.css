@@ -7,32 +7,51 @@
 
 .main {
   display: flex;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
+  justify-content: space-between;
+  overflow: auto;
 }
 
 .columns {
-  min-height: 100px;
+  min-height: 200px;
 }
 
 .centerpiece {
-  float: left;
+  flex: 3;
   margin: 1%;
-  width: 60%;
-  flex: 1;
 }
 
 .sidebar {
-  float: left;
-  width: 30%;
+  flex: 2;
   margin: 1%;
-  flex: 1;
+  border: none;
 }
 
 .side1, .side2 {
+  display: block;
   margin: 1%;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+  }
+  .centerpiece {
+    height: 248px;
+  }
+
+  .side1, .side2 {
+    width: 49.55555%;
+    display: inline-flex;
+    margin: 1% 0 0;
+  }
+}
+
+@media screen and (max-width: 596px) {
+  .sidebar {
+    margin: 1%;
+  }
+  .side1, .side2 {
+    width: 100%;
+    display:block;
+    margin: 1% 0 0;
+  }
 }
