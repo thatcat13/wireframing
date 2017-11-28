@@ -1,0 +1,38 @@
+/* For testing only */
+
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.main {
+  display: flex;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.columns {
+  min-height: 100px;
+}
+
+.centerpiece {
+  float: left;
+  margin: 1%;
+  width: 60%;
+  flex: 1;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  margin: 1%;
+  flex: 1;
+}
+
+.side1, .side2 {
+  margin: 1%;
+}
